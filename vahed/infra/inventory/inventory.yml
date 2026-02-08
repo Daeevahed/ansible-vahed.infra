@@ -1,0 +1,16 @@
+all:
+  children:
+    servers:
+      hosts:
+        db:
+          ansible_host: 192.168.1.13
+        swarm-01:
+          ansible_host: 192.168.186.150
+        swarm-02:
+          ansible_host: 192.168.186.151
+        swarm-03:
+          ansible_host: 192.168.186.152
+      vars:
+        ansible_user: vahed
+        ansible_ssh_private_key_file: ~/.ssh/ansible/ansible
+

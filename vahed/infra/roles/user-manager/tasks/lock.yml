@@ -1,0 +1,5 @@
+---
+- name: Lock user {{ user.name }}
+  user:
+    name: "{{ user.name }}"
+    password_lock: true

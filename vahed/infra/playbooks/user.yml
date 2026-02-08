@@ -1,0 +1,6 @@
+---
+- name: User management
+  hosts: all
+  become: true
+  roles:
+    - user-manager

@@ -1,0 +1,57 @@
+all:
+  children:
+    servers:
+      hosts:
+        db:
+          ansible_host: 192.168.1.13
+        swarm-01:
+          ansible_host: 192.168.186.150
+        swarm-02:
+          ansible_host: 192.168.186.151
+        swarm-03:
+          ansible_host: 192.168.186.152
+      vars:
+        ansible_user: vahed
+        ansible_ssh_private_key_file: ~/.ssh/ansible/ansible
+
+  vars:
+    users:
+      - name: arman
+        action: create
+        sudo: true
+
+      - name: milad
+        action: create
+        sudo: true
+
+      - name: sara
+        action: create
+        sudo: true
+
+      - name: navid
+        action: create
+        sudo: true
+
+      - name: reza
+        action: create
+        sudo: true
+
+      - name: farhad
+        action: create
+        sudo: true
+
+      - name: elnaz
+        action: create
+        sudo: true
+
+      - name: pouya
+        action: create
+        sudo: true
+
+      - name: mahsa
+        action: create
+        sudo: true
+
+      - name: amir
+        action: create
+        sudo: true
