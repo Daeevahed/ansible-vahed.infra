@@ -1,6 +1,7 @@
 ---
-- include_tasks: "{{ user.action }}.yml"
+- name: Manage users
+  include_tasks: "{{ user.action }}.yml"
   loop: "{{ users }}"
   loop_control:
     loop_var: user
-
+  when: users | length > 0

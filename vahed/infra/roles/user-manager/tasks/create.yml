@@ -3,4 +3,17 @@
   user:
     name: "{{ user.name }}"
     shell: /bin/bash
+    password: "{{ user_passwords[user.name] | default(omit) }}"
     state: present
+
+- name: Add SSH key for {{ user.name }}
+  authorized_key:
+    user: "{{ user.name }}"
+    key: "{{ user.ssh_key }}"
+
+- name: Add {{ user.name }} to sudo group
+  user:
+    name: "{{ user.name }}"
+    groups: sudo
+    append: yes
+  when: user.sudo | default(false)

@@ -19,39 +19,49 @@ all:
       - name: arman
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQArmanKEY"
 
       - name: milad
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQMiladKEY"
 
       - name: sara
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQSaraKEY"
 
       - name: navid
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQNavidKEY"
 
       - name: reza
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQRezaKEY"
 
       - name: farhad
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQFarhadKEY"
 
       - name: elnaz
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQElnazKEY"
 
       - name: pouya
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQPouyaKEY"
 
       - name: mahsa
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQMahsaKEY"
 
       - name: amir
         action: create
         sudo: true
+        ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQAmirKEY"
