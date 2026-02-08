@@ -3,3 +3,4 @@
   user:
     name: "{{ user.name }}"
     password_lock: true
+    shell: /usr/sbin/nologin

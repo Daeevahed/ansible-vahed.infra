@@ -11,9 +11,23 @@
     user: "{{ user.name }}"
     key: "{{ user.ssh_key }}"
 
-- name: Add {{ user.name }} to sudo group
+- name: Ensure {{ user.name }} is sudoer
   user:
     name: "{{ user.name }}"
     groups: sudo
     append: yes
   when: user.sudo | default(false)
+
+
+- name: Ensure {{ user.name }} is NOT sudoer
+  user:
+    name: "{{ user.name }}"
+    groups: sudo
+    state: present
+    append: no
+  when: not (user.sudo | default(false))
+
+- name: Remove {{ user.name }} from sudo group
+  command: gpasswd -d {{ user.name }} sudo
+  become: true
+  when: not (user.sudo | default(false))

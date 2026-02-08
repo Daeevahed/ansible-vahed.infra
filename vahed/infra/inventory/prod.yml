@@ -17,13 +17,13 @@ all:
   vars:
     users:
       - name: arman
-        action: create
-        sudo: true
+        action: lock
+        sudo: false
         ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQArmanKEY"
 
       - name: milad
-        action: create
-        sudo: true
+        action: lock
+        sudo: false
         ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQMiladKEY"
 
       - name: sara
